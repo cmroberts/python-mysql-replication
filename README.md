@@ -3,7 +3,12 @@
 <a href="https://pypi.python.org/pypi/mysql-replication"><img src="http://img.shields.io/pypi/dm/mysql-replication.svg"></a>
 
 <img src ="https://github.com/julien-duponchelle/python-mysql-replication/blob/main/logo.svg">
+
+This fork supports MySQL 8.4.6+ and is not compatible with earlier versions of MySQL due to changes in the `SHOW MASTER STATUS` and `RESET MASTER` commands. 
+This fork fixes https://github.com/julien-duponchelle/python-mysql-replication/issues/627 by updating these commands to be compatible with MySQL 8.4. 
+
 Pure Python Implementation of MySQL replication protocol build on top of PyMYSQL. This allows you to receive event like insert, update, delete with their datas and raw SQL queries.
+
 
 # Use cases
 
@@ -33,10 +38,10 @@ https://github.com/julien-duponchelle/python-mysql-replication/discussions
 
 # Project status
 
-The project is test with:
+The project is compatible with:
 
 - MySQL 5.5, 5.6 and 5.7 (v0.1 ~ v0.45)
-- MySQL 8.0.14 (v1.0 ~)
+- MySQL 8.4.6+
 - MariaDB 10.6
 - Python 3.9, 3.13
 - PyPy 3.7, 3.9 (really faster than the standard Python interpreter)
